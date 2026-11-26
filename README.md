@@ -275,17 +275,7 @@ Hata bildirmek veya öneride bulunmak için:
 
 ---
 
-## 📄 LİSANS
 
-Projenin lisans koşulları ve kullanılan üçüncü taraf yazılımların lisansları için GitHub deposundaki lisans dosyalarını inceleyebilirsiniz.
-
----
-
-<p align="center">
-  <strong>🎬 HocaSwap</strong>
-  <br>
-  Yapay zekâ ile medya işlemenin daha kolay yolu.
-  <br><br>
   Geliştirici: <a href="https://github.com/BiggerSon">BiggerSon</a>
   <br><br>
   <sub>Python ile ❤️ geliştirildi.</sub>
