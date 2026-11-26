@@ -1,64 +1,236 @@
-🎬 Hoca Studio FaceSwapper
+🎬 HocaSwap
 
-Hoca Studio FaceSwapper, PySide6 tabanlı modern ve koyu temalı bir arayüz ile yerel FaceFusion ve FFmpeg altyapısını birleştiren profesyonel bir AI yüz değiştirme (Face Swap) masaüstü uygulamasıdır.
+<p align="center">
+  **Yapay Zekâ Destekli Yüz Değiştirme ve Video İşleme Uygulaması**
+  <br>
+  Python ve FaceFusion altyapısıyla geliştirilmiş masaüstü uygulaması.
+</p>
 
-🚀 Öne Çıkan Özellikler
+⚠️ Sorumluluk ve Kullanım
 
-🌙 Modern Koyu Tema Arayüzü: Göz yormayan, şık ve kullanıcı dostu panel tasarımı.
+HocaSwap, izinli ve yasal medya düzenleme işlemleri için geliştirilmiştir.
 
-📁 Çoklu Referans Fotoğraf Desteği: Farklı açılardan çekilmiş birden fazla fotoğraf seçerek çok daha kaliteli ve doğal sonuçlar elde edin.
+Başka kişilere ait fotoğraf, video veya ses kayıtlarını kullanmadan önce gerekli izinlerin alınması kullanıcıların sorumluluğundadır.
 
-🖱️ Sürükle-Bırak Desteği: Hedef videoları ve müzik dosyalarını arayüze kolayca sürükleyip bırakın.
+Uygulamanın kişileri yanıltmak, taklit etmek, dolandırıcılık yapmak veya rızaya aykırı içerik üretmek amacıyla kullanılması uygun değildir.
 
-✨ Sihirli Komutlar (Prompt): Tek bir komutla yaşlandırma, renk filtreleri (esmer/bronz yap, siyah-beyaz) veya ayna efektleri uygulayın.
+Yapay zekâ ile değiştirilmiş içeriklerin gerektiğinde açıkça belirtilmesi önerilir.
 
-📊 Canlı Takip ve ETA: Anlık ilerleme çubuğu, yüzde göstergesi ve dinamik kalan süre (ETA) hesaplaması.
+📌 Proje Hakkında
 
-⚡ Parçalı İşlem Mimarisi: Büyük videoları küçük parçalara (chunk) bölerek yüksek stabilite ve verimlilik sağlar.
+HocaSwap, yapay zekâ teknolojilerini kullanarak fotoğraf ve videolarda yüz değiştirme işlemlerini kolaylaştırmak amacıyla geliştirilmiş bir masaüstü uygulamasıdır.
 
-🛠️ Proje Mimarisi
+Proje, FaceFusion'ın güçlü yüz değiştirme altyapısını modern ve kullanıcı dostu bir grafik arayüzüyle bir araya getirir. Kullanıcıların karmaşık komutlarla uğraşmadan fotoğraf ve video işlemlerini gerçekleştirebilmesini hedefler.
 
-main.py - Uygulamanın ana giriş noktası ve pencere yöneticisi.
+HocaSwap yalnızca yüz değiştirme işlemiyle sınırlı değildir. FFmpeg entegrasyonu sayesinde video parçalama, birleştirme, ses işlemleri ve çeşitli medya düzenleme süreçlerini de destekleyen bir çalışma ortamı sunar.
 
-ui/main_window.py - PySide6 tabanlı arayüz bileşenleri ve kullanıcı etkileşimleri.
+Uygulama, özellikle uzun videoların işlenmesini daha yönetilebilir hâle getirmek ve bütün işlemleri tek bir arayüz üzerinden kontrol edebilmek için tasarlanmıştır.
 
-ui/worker.py - Arayüzün donmasını önleyen arka plan iş parçacığı (QThread) ve FaceFusion komut yöneticisi.
+✨ Özellikler
 
-core/process_runner.py - Harici süreçleri güvenli şekilde çalıştıran alt süreç sarmalayıcısı.
+Yapay Zekâ ile Yüz Değiştirme: FaceFusion altyapısıyla yüz değiştirme işlemleri.
 
-core/video_utils.py - FFmpeg/FFprobe tabanlı video bölme, birleştirme, ses ekleme ve filtreleme modülü.
+Çoklu Referans Fotoğrafı: Birden fazla referans fotoğrafıyla çalışma.
 
-⚙️ Kurulum ve Çalıştırma
+Video İşleme: Video dosyalarında yüz değiştirme.
 
-1. Depoyu Klonlayın
+Modern Arayüz: PySide6 ile hazırlanmış karanlık ve sade tasarım.
 
-git clone https://github.com/BiggerSon/HocaSwap.git
-cd HocaSwap
+Sürükle ve Bırak: Medya dosyalarını kolayca uygulamaya ekleme.
 
+Parçalı Video İşleme: Büyük videoları daha küçük parçalara ayırarak işleme.
 
-2. Bağımlılıkları Yükleyin
+Video Birleştirme: İşlenen parçaları yeniden birleştirme.
 
-pip install -r requirements.txt
+Ses Entegrasyonu: Video ve ses dosyaları üzerinde işlemler gerçekleştirme.
 
+İlerleme Takibi: İşlem yüzdesini ve tahmini kalan süreyi görüntüleme.
 
-3. Konfigürasyon (config.py)
+Canlı İşlem Kayıtları: Arka planda gerçekleşen işlemleri takip etme.
 
-Ana dizinde config.py dosyası oluşturarak kendi FaceFusion ve Python yollarınızı tanımlayın:
+Arka Plan İşlemleri: Uzun süren işlemler sırasında arayüzün yanıt vermeye devam etmesi.
 
-FACEFUSION_PYTHON = r"Kendi_Python_Yolunuz/python.exe"
-FACEFUSION_SCRIPT = r"Kendi_FaceFusion_Yolunuz/facefusion.py"
-FACEFUSION_CWD = r"Kendi_FaceFusion_Klasorunuz"
+Magic Commands: Desteklenen komutlarla çeşitli görsel efektler uygulama.
 
+🖥️ Kullanılan Teknolojiler
 
-4. Uygulamayı Başlatın
+Teknoloji
 
-python main.py
-
-
-💻 Kullanılan Teknolojiler
+Kullanım Amacı
 
 Python
 
-PySide6 (Qt for Python)
+Ana programlama dili
+
+PySide6
+
+Masaüstü arayüzü
 
 FaceFusion
+
+Yapay zekâ ile yüz değiştirme
+
+FFmpeg
+
+Video ve ses işleme
+
+FFprobe
+
+Medya dosyalarını analiz etme
+
+QThread
+
+Arka plan işlemlerini yönetme
+
+🎨 Magic Commands
+
+HocaSwap içerisinde desteklenen bazı görsel efektler için metin tabanlı komut sistemi bulunmaktadır.
+
+Bu sistem sayesinde kullanıcılar belirli efektleri komutlar aracılığıyla uygulayabilir.
+
+Örnek efekt kategorileri:
+
+Yaşlandırma efektleri
+
+Renk ve ton düzenlemeleri
+
+Siyah-beyaz filtreler
+
+Ayna efektleri
+
+⚙️ Çalışma Mantığı
+
+HocaSwap, farklı teknolojileri tek bir çalışma akışında birleştirir.
+
+Kullanıcı değiştirmek istediği yüzün bulunduğu referans fotoğraflarını seçer.
+
+Hedef video veya medya dosyasını uygulamaya ekler.
+
+İlgili işlem ayarlarını yapılandırır.
+
+Uygulama, FaceFusion altyapısını kullanarak yüz değiştirme işlemini başlatır.
+
+Uzun videolar gerektiğinde parçalara ayrılarak işlenir.
+
+FFmpeg kullanılarak gerekli video ve ses işlemleri gerçekleştirilir.
+
+İşlem tamamlandığında çıktı dosyası oluşturulur.
+
+📂 Proje Yapısı
+
+HocaSwap/
+│
+├── core/
+│   ├── process_runner.py
+│   └── video_utils.py
+│
+├── ui/
+│   ├── main_window.py
+│   └── worker.py
+│
+├── main.py
+├── requirements.txt
+├── config.py
+└── README.md
+
+Temel dosyalar:
+
+main.py: Uygulamanın başlangıç noktası.
+
+ui/main_window.py: Ana kullanıcı arayüzü.
+
+ui/worker.py: Arka plan işlemlerini yönetir.
+
+core/process_runner.py: Harici programların çalıştırılmasını yönetir.
+
+core/video_utils.py: Video parçalama, birleştirme ve ses işlemlerini gerçekleştirir.
+
+requirements.txt: Python bağımlılıklarını içerir.
+
+config.py: FaceFusion kurulumuna ait yapılandırma bilgilerini tutar.
+
+📥 Kurulum
+
+HocaSwap'ı bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
+
+1. Gereksinimler
+
+Kuruluma başlamadan önce aşağıdaki yazılımların bilgisayarınızda bulunması gerekir:
+
+Python 3.10 veya üzeri
+
+Git
+
+FFmpeg
+
+FFprobe
+
+FaceFusion
+
+FaceFusion'ın gerektirdiği donanım ve Python bağımlılıkları
+
+2. Projeyi İndirin
+
+Öncelikle GitHub deposunu bilgisayarınıza klonlayın:
+
+git clone https://github.com/BiggerSon/HocaSwap.git
+
+Proje klasörüne girin:
+
+cd HocaSwap
+
+3. Sanal Ortam Oluşturun
+
+Python bağımlılıklarını diğer projelerden izole etmek için sanal ortam oluşturun:
+
+python -m venv .venv
+
+Windows üzerinde sanal ortamı etkinleştirin:
+
+.venv\Scripts\activate
+
+4. Gerekli Kütüphaneleri Yükleyin
+
+Öncelikle pip paket yöneticisini güncelleyin:
+
+python -m pip install --upgrade pip
+
+Ardından proje bağımlılıklarını yükleyin:
+
+pip install -r requirements.txt
+
+5. FaceFusion Yapılandırması
+
+HocaSwap'ın yüz değiştirme işlemlerini gerçekleştirebilmesi için bilgisayarınızda çalışan bir FaceFusion kurulumu bulunmalıdır.
+
+Proje ana dizininde config.py dosyasını oluşturun ve FaceFusion kurulumunuza uygun yolları tanımlayın:
+
+FACEFUSION_PYTHON = r"C:\FaceFusion\python.exe"
+
+FACEFUSION_SCRIPT = r"C:\FaceFusion\facefusion.py"
+
+FACEFUSION_CWD = r"C:\FaceFusion"
+
+Önemli: Yukarıdaki yollar örnektir. Kendi FaceFusion kurulumunuzun bulunduğu dizinlere göre değiştirilmelidir.
+
+6. FFmpeg Kurulumu
+
+FFmpeg ve FFprobe araçlarının bilgisayarınızda kurulu olması gerekir.
+
+Kurulumdan sonra Windows PATH değişkenine FFmpeg'in bin klasörünü ekleyin.
+
+Kurulumun başarılı olduğunu kontrol etmek için terminalde şu komutları çalıştırın:
+
+ffmpeg -version
+
+ffprobe -version
+
+Her iki komut da sürüm bilgisi döndürüyorsa kurulum tamamlanmıştır.
+
+7. Uygulamayı Başlatın
+
+Bütün kurulum adımları tamamlandıktan sonra HocaSwap'ı çalıştırabilirsiniz:
+
+python main.py
+
+Uygulamanın grafik arayüzü açılacaktır.
