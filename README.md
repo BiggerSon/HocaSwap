@@ -29,8 +29,8 @@
 
 1. **Depoyu Klonlayın:**
    ```bash
-   git clone [https://github.com/BiggerSon/HocaSwap.git](https://github.com/BiggerSon/HocaSwap.git)
-   cd faceswap_local
+   git clone https://github.com/BiggerSon/HocaSwap.git
+   cd HocaSwap
 Bağımlılıkları Yükleyin:
 
 Bash
